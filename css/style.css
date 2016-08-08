@@ -98,7 +98,7 @@
   border: 1px solid grey;
 }
 
-header:after, .consult:before, .about:before, .map:before {
+header:after, .consult:before, .about:before, .about:after, .map:before {
   content: '';
   background-image: url(../img/border.png);
   display: inline-block;
@@ -195,6 +195,7 @@ header:after, .consult:before, .about:before, .map:before {
   padding-left: 50px;
   width: 235px;
   vertical-align: top;
+  position: relative;
 }
 
 .features-item-tool:before {
@@ -206,6 +207,12 @@ header:after, .consult:before, .about:before, .map:before {
   background-position: -50px -50px;
   background-repeat: no-repeat;
   background-image: url(../img/hammer.gif);
+  position: absolute;
+  left: -10px;
+}
+
+.features-item-tool {
+	width: 225px;
 }
 
 .features-item-work:before {
@@ -217,6 +224,12 @@ header:after, .consult:before, .about:before, .map:before {
   background-position: -50px -50px;
   background-repeat: no-repeat;
   background-image: url(../img/work.gif);
+    position: absolute;
+  left: -10px;
+}
+
+.features-item-work {
+	width: 225px;
 }
 
 .features-item-fencing:before {
@@ -228,6 +241,12 @@ header:after, .consult:before, .about:before, .map:before {
   background-position: -50px -50px;
   background-repeat: no-repeat;
   background-image: url(../img/fencing.gif);
+    position: absolute;
+  left: -10px;
+}
+
+.features-item-fencing {
+	width: 225px;
 }
 
 .features-item-workman:before {
@@ -239,6 +258,12 @@ header:after, .consult:before, .about:before, .map:before {
   background-position: -50px -50px;
   background-repeat: no-repeat;
   background-image: url(../img/workman.gif);
+    position: absolute;
+  left: -10px;
+}
+
+.features-item-workman {
+	width: 225px;
 }
 
 .technic {
@@ -373,7 +398,7 @@ th {
   width: 620px;
 }
 
-.about-reviews-item-one:before {
+.image-item-one {
 	content: '';
   height: 115px;
   width: 115px;
@@ -384,7 +409,7 @@ th {
   background-repeat: no-repeat;
 }
 
-.about-reviews-item-two:before {
+.image-item-two {
 	content: '';
   height: 115px;
   width: 115px;
@@ -411,8 +436,20 @@ th {
   padding-bottom: 15px;
 }
 
+.map-container {
+	width: 100%;
+}
+.map-container iframe{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+	position: relative; /* IE needs a position other than static */
+}
+.map-container iframe.clicked{
+	pointer-events: auto;
+}
+
 .page-footer {
-  font-size: 0;
   background-color: #202e3b;
 }
 
@@ -426,6 +463,12 @@ th {
 
 .footer-main-nav {
 	color:white;
+}
+
+.footer-main-nav li {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .footer-btn-order {
@@ -543,7 +586,8 @@ th {
 .catalog-list {
   display: inline-block;
   width: 620px;
-  margin: 30px 0px 45px 80px;
+  padding: 30px 0px 45px 80px;
+  box-sizing: border-box;
 }
 
 .offers-list {
@@ -658,6 +702,11 @@ th {
   padding-left: 0;
 }
 
+.sub-menu li {
+  display: inline-block;
+  padding: 20px;
+}
+
 .sub-menu_header {
   color: #ffcd34;
   font-size: 24px;
@@ -673,7 +722,7 @@ th {
 .portfolio-item-wood {
   background-image: url(../img/portfolio-promo.jpg);
   background-position: 0px;
-  background-size:100%;
+  background-size: cover;
   height: 500px;
   width: 100%;
     background-repeat: no-repeat;
@@ -684,7 +733,7 @@ th {
 .portfolio-item-city {
   background-image: url(../img/portfolio-promo1.jpg);
   background-position: 0px;
-    background-size:100%;
+    background-size: cover;
   height: 500px;
   width: 100%;
     background-repeat: no-repeat;
@@ -696,7 +745,7 @@ th {
   background-image: url(../img/portfolio-promo2.jpg);
   background-position: 0px;
   border:none;
-    background-size:100%;
+    background-size: cover;
   height: 500px;
   width: 100%;
     background-repeat: no-repeat;
@@ -709,6 +758,7 @@ th {
   background-color: white;
   margin-left: 0;
   padding: 30px;
+  padding-top: 30px;
 }
 
 .portfolio-cart-title {
@@ -756,8 +806,8 @@ th {
 
 .contacts-title, .contacts-article, .contacts-btn {
   display: inline-block;
-  width: 700px;
   padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contacts-title {
@@ -779,9 +829,10 @@ th {
   width: 240px;
   margin-top: 25px;
   margin-bottom: 25px;
-  	padding: 0;
-	background-color: #ffe184;
+	background-color: #ffcd34;
 	text-align: center;
+	float: right;
+	color: #202e3b;
 }
 
 .contacts-consult-map {
@@ -803,13 +854,15 @@ th {
 }
 
 .telephone img {
-	vertical-align: center;
 	padding-right: 15px;
+	display: inline-block;
+vertical-align: middle;
 }
 
 .e-mail img {
-	vertical-align: center;
 	padding-right: 15px;
+	display: inline-block;
+vertical-align: middle;
 }
 
 .contacts-tel-mail-consult {
@@ -892,7 +945,7 @@ th {
 
 .feedback_text {
   font-size: 14px;
-  font-weight: italic;
+  font-style: italic;
   text-align: center;
 }
 
