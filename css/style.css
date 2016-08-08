@@ -19,7 +19,6 @@
   width: 940px;
   margin: 0 auto;
   font-family: 'PT Sans', sans-serif;
-  overflow:hidden;
 }
 
 .page-header {
@@ -29,7 +28,6 @@
 
 .logo {
   display: inline-block;
-  width: 340px;
   padding: 10px;
   text-decoration: none;
   color: black;
@@ -44,6 +42,7 @@
   background-repeat: no-repeat;
   vertical-align: middle;
   background-image: url(../img/logo.png);
+  margin-right: 10px;
 }
 
 .logo-brand {
@@ -53,7 +52,6 @@
 
 .main-nav {
 	display: inline-block;
-	width: 600px;
 }
 
 .main-nav ul{
@@ -74,14 +72,15 @@
   font-size: 16px;
 }
 
-.active {
-	font-weight: bold;
+.not-active {
+	opacity: 0,7;
 }
 
 .btn-order {
 	padding: 0;
 	background-color: #ffe184;
-	font-weight: bold;
+	width: 174px;
+	text-align: center;
 }
 
 .promo-btn:after {
@@ -157,28 +156,30 @@ header:after, .consult:before, .about:before, .map:before {
 	margin: 30px 0px;
 	color: #ffce34;
 	font-size: 24px;
+	font-weight: normal;
 }
 
-input, .consult-btn {
+.consult input {
   width: 23%;
   background-color: #202e3b;
-  height: 42px;
+  padding: 10px 20px 10px 20px;
   border: 1px solid #ffce34;
   margin-top: 0px;
   margin-bottom: 30px;
   margin-right: 2.6%;
-  padding-left: 20px;
-  font-weight: bold;
   font-size: 16px;
+  display: inline-block;
 }
 
 .consult-btn {
   text-decoration: none;
   display: inline-block;
-  color: #202e3b;
   background-color: #ffce34;
-  margin-right: 0;
-  padding-left: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 220px;
 }
 
 .features {
@@ -243,33 +244,42 @@ input, .consult-btn {
 .technic {
   background-color: #f3f3f3;
   font-size: 0px;
+  width: 100%;
 }
 
 .technic-menu, .deals {
-  margin-top: 50px;
-  margin-bottom: 50px;
   font-size: 16px;
   display: inline-block;
-  vertical-align:top;
 }
 
 .technic h2 {
-  padding-bottom: 10px;
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.deals h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  float: left;
 }
 
 .technic-menu ul {
   padding-left: 0;
+  padding-right: 20px;
+  list-style-type: none;
 }
 
 .technic-menu {
   width: 220px;
-  line-height: 2;
+  line-height: 2.5;
   padding-top: 5px;
   padding-bottom: 10px;
-  list-style-type: none;
+  vertical-align:top;
 }
 
 .technic-menu a {
@@ -277,7 +287,9 @@ input, .consult-btn {
 }
 
 .deals {
-  width: 70%;
+  width: 700px;
+  vertical-align:top;
+  padding-top: 22px;
 }
 
 table {
@@ -289,9 +301,9 @@ table {
 	height: 30px;
 }
 
-r, th, td {
-  padding: 5px 5px 10px 10px;
-  margin-bottom: 5p   x;
+tr, th, td {
+  padding: 10px;
+  margin-bottom: 5px;
   margin-top: 5px;
 }
 
@@ -300,66 +312,116 @@ th {
   text-align: left;
 }
 
+.white {
+  background: #fff;
+}
+
 .about {
   background-color: #202e3b;
+  float: left;
+  width: 100%;
+}
+
+.about-number, .about-reviews {
+	font-size: 16px;
+	display: inline-block;
+	vertical-align:top;
+	margin-top: 37px;
 }
 
 .about-number {
-	  width: 40%;
-  float: left;
+	width: 300px;
+
 }
 
-.about-reviews h2 {
-  color: white;
-  margin-top: 40px;
-  margin-bottom: 10px;
+.about-number h2 {
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: white;
 }
 
 .about-number h2 span {
   font-weight: normal;
 }
 
-.about-digit span {
+.about-number ul {
+  padding-left: 0;
   padding-right: 20px;
+  list-style-type: none;
+  font-weight: bold;
+  color: #9e9e9e;
+}
+
+.about-number ul span {
+  font-weight: bold;
   font-size: 38px;
-  color: #ffce34;
+  color: #f1b132;
+  padding-right: 20px;
+}
+
+
+.about-reviews h2 {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .about-reviews {
   margin-bottom: 60px;
+  width: 620px;
 }
 
-.about-reviews-item-image {
-	  float: left;
+.about-reviews-item-one:before {
+	content: '';
   height: 115px;
   width: 115px;
-  border: 1px solid #ffce34;
-  border-radius: 5px;
   margin-right: 15px;
+  background-image: url(../img/Client1.png);
+  display: inline-block;
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+.about-reviews-item-two:before {
+	content: '';
+  height: 115px;
+  width: 115px;
+  margin-right: 15px;
+  background-image: url(../img/Client2.png);
+  display: inline-block;
+  background-size:100%;
+  background-repeat: no-repeat;
 }
 
 .about-reviews blockquote {
   font-style: italic;
   font-size: 18px;
   color: white;
+  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .about-reviews cite {
-  padding-top: 10px;
   font-size: 18px;
   color: #ffce34;
   font-weight: bold;
+  font-style: italic;
+  padding-bottom: 15px;
 }
 
 .page-footer {
-  background-color: #ffce34;
   font-size: 0;
   background-color: #202e3b;
 }
 
 .footer-logo {
   color: #ffce34;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .footer-main-nav {
@@ -373,7 +435,7 @@ th {
 
 .catalog-consult {
   background-image: url(../img/promo.jpg);
-  background-position: 0px -600px;
+  background-position: 0px;
   background-size:cover;
   font-size: 0;
   padding-bottom: 40px;
@@ -396,12 +458,13 @@ th {
   display: inline-block;
   width: 700px;
   margin-bottom: 10px;
+  color: #ffcd34;
 }
 
 .catalog-btn-btn_article {
   display: inline-block;
-  width: 240px;
   vertical-align: top;
+  	float: right;
 }
 
 .catalog-btn {
@@ -409,25 +472,48 @@ th {
   height: 45px;
   margin-top: 40px;
   margin-bottom: 15px;
+  padding: 12px 20px 12px 20px;
   text-decoration: none;
   color: #202e3b;
   background-color: #ffce34;
   font-weight: bold;
   font-size: 18px;
-  border: none;
 }
 
+.consult-btn_article {
+	  font-size:16px;
+  height: 20px;
+  color:white;
+  width: 240px;
+}
 
 .catalog-subtitle:before {
   content: '';
   display: inline-block;
   background-image: url(../img/techTypes.gif);
   background-repeat: no-repeat;
-  background-position: 0 -2px;
+  background-position: 0;
   vertical-align: middle;
   width: 30px;
   height: 25px;
   margin-right: 15px;
+}
+
+.selected {
+	text-decoration: none;
+	font-weight: bold;
+	color: #353535;
+}
+
+.selected:before {
+  display: inline-block;
+  content: '';
+  background-image: url(../img/arrow-selected.png);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 16px;
+  padding-right: 5px;
+  vertical-align: middle;
 }
 
 .download-catalog {
@@ -439,14 +525,15 @@ th {
   text-decoration: none;
   margin-top: 20px;
   font-size: 15px;
+  text-align: center;
 }
 
 .download-catalog:before {
   content: '';
   display: inline-block;
-  background-image: url(../image/download.gif);
+  background-image: url(../img/download.png);
   background-repeat: no-repeat;
-  background-position: 0 -2px;
+  background-position: 0;
   vertical-align: middle;
   width: 25px;
   height: 25px;
@@ -459,19 +546,30 @@ th {
   margin: 30px 0px 45px 80px;
 }
 
-.catalog-card {
+.offers-list {
+	  display: inline-block;
+  width: 940px;
+}
+
+.catalog-item-card {
   display: inline-block;
   width: 300px;
   height: 400px;
-  margin: 0px 0px 20px 10px;
-  padding: 25px;
+  margin: 0px 10px 20px 10px;
+  padding: 25px 30px 25px 30px;
   background-color: white;
 }
 
+.catalog-item-card a {
+  text-decoration: none;
+}
+
 .catalog-item-card .name {
+  text-decoration: none;
   font-size: 21px;
   font-weight: bold;
   padding-bottom:25px;
+    color: black;
 }
 
 .catalog-item-card .image {
@@ -482,8 +580,10 @@ th {
 
 .catalog-item-card .price {
   padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 27px;
   font-weight: bold;
+    color: black;
 }
 
 .item-card-btn {
@@ -492,9 +592,7 @@ th {
   height: 35px;
   color: white;
   font-size: 16px;
-  border:none;
-  text-decoration: none;
-  margin-top: 25px;
+  padding: 10px 18px 10px 18px;
 }
 
 .rent-btn {
@@ -507,14 +605,20 @@ th {
 
 .pagination {
   text-align: center;
+  display: inline-block;
+
 }
 
 .pagination ul {
   font-size: 14px;
   display: inline;
-  border:none;
-  margin-left: 5px;
-  margin-right: 5px
+  list-style-type: none;
+}
+
+.pagination-active {
+	background-color: #354b60;
+	background-size: 21px;
+	color: white;
 }
 
 .offers-list .catalog-item-card {
@@ -522,15 +626,24 @@ th {
   margin-bottom: 40px;
 }
 
-.s {
+.offers-list {
+  font-size: 0;
+  background-image: url(../img/offers.png);
+  background-position: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.price-old {
   text-decoration: line-through;
   color:red;
   padding-right: 15px;
 }
 
 .sub-menu {
-  background-image: url(../image/portfolio-menu.jpg);
-  background-position: 0px -225px;
+  background-image: url(../img/portfolio-menu.jpg);
+  background-position: 0px;
   background-size:100%;
   background-repeat: no-repeat;
   font-size: 0;
@@ -538,12 +651,11 @@ th {
 }
 
 .sub-menu ul {
-  margin-top: 20px;
+	  margin-top: 20px;
   margin-bottom: 20px;
   display: inline-block;
   width: 640px;
   padding-left: 0;
-  text-align: right;
 }
 
 .sub-menu_header {
@@ -558,28 +670,37 @@ th {
   color: white;
 }
 
-.portfolio-item {
-  background-size:100%;
-  background-repeat: no-repeat;
-  font-size: 0;
-  border-bottom: 10px solid black;
-  height: 500px;
-}
-
 .portfolio-item-wood {
   background-image: url(../img/portfolio-promo.jpg);
-  background-position: 0px -250px;
+  background-position: 0px;
+  background-size:100%;
+  height: 500px;
+  width: 100%;
+    background-repeat: no-repeat;
+      font-size: 0;
+        border-bottom: 10px solid black;
 }
 
 .portfolio-item-city {
   background-image: url(../img/portfolio-promo1.jpg);
-  background-position: 0px -300px;
+  background-position: 0px;
+    background-size:100%;
+  height: 500px;
+  width: 100%;
+    background-repeat: no-repeat;
+      font-size: 0;
+        border-bottom: 10px solid black;
 }
 
 .portfolio-item-village {
   background-image: url(../img/portfolio-promo2.jpg);
-  background-position: 0px -350px;
+  background-position: 0px;
   border:none;
+    background-size:100%;
+  height: 500px;
+  width: 100%;
+    background-repeat: no-repeat;
+      font-size: 0;
 }
 
 .portfolio-cart {
@@ -587,7 +708,6 @@ th {
   height: 250px;
   background-color: white;
   margin-left: 0;
-  margin-top: 100px;
   padding: 30px;
 }
 
@@ -604,8 +724,7 @@ th {
 }
 
 .btn-about {
-  padding-left: 10px;
-  padding-right: 0;
+  padding: 15px 17px 15px 17px;
   font-size: 15px;
   font-weight: bold;
   border: none;
@@ -616,33 +735,16 @@ th {
   color: #1d333f;
 }
 
-.btn-about :after {
+.btn-about:after {
   display: inline-block;
   content: '';
-  background-image: url(../image/pointer.gif);
+  background-image: url(../img/pointer.png);
   background-repeat: no-repeat;
   width: 28px;
   height: 26px;
   background-position: 10px 1px;
   vertical-align: middle;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .contacts {
   font-size: 0;
@@ -652,9 +754,10 @@ th {
   background-repeat: no-repeat;
 }
 
-.contacts-title, .contacts-article {
+.contacts-title, .contacts-article, .contacts-btn {
   display: inline-block;
   width: 700px;
+  padding-top: 50px;
 }
 
 .contacts-title {
@@ -667,16 +770,18 @@ th {
 }
 
 .contacts-article {
-  padding-left: 15px;
+  padding-left: 25px;
   font-size: 16px;
   color: white;
 }
 
 .contacts-btn {
-  display: inline-block;
   width: 240px;
   margin-top: 25px;
   margin-bottom: 25px;
+  	padding: 0;
+	background-color: #ffe184;
+	text-align: center;
 }
 
 .contacts-consult-map {
@@ -687,6 +792,24 @@ th {
   margin-top: 40px;
   margin-bottom: 40px;
   display: inline-block;
+}
+
+.telephone {
+	padding-bottom: 20px;
+}
+
+.e-mail {
+	padding-bottom: 20px;	
+}
+
+.telephone img {
+	vertical-align: center;
+	padding-right: 15px;
+}
+
+.e-mail img {
+	vertical-align: center;
+	padding-right: 15px;
 }
 
 .contacts-tel-mail-consult {
@@ -715,10 +838,11 @@ th {
   display: block;
   text-decoration: none;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #d5d5d5;
   width: 100%;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  padding: 14px;
 }
 
 .contacts-description {
@@ -731,7 +855,7 @@ th {
   text-decoration: none;
   border: none;
   background-color: #354b60;
-  font-size: 14px;
+  font-size: 18px;
   height: 45px;
   width: 300px;
   color:white;
@@ -762,11 +886,13 @@ th {
   width: 120px;
   height: 120px;
   border-radius: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .feedback_text {
   font-size: 14px;
-  font-weight:italic;
+  font-weight: italic;
   text-align: center;
 }
 
@@ -774,4 +900,5 @@ th {
   font-size: 14px;
   font-weight:bold;
   text-align: center;
+  margin-top: 10px;
 }
